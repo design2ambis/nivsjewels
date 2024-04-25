@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FooterCat } from './footercategory';
 import FooterCategory from './footercat';
 
 const Footer = () => {
@@ -34,15 +35,7 @@ const Footer = () => {
                           </li>
                         </ul>
                       </div>
-                    </div>
-                    {/*<div className="block block-social">*/}
-                    {/*    <ul className="social-link">*/}
-                    {/*        <li><a href="#"><i className="fa fa-twitter"></i></a></li>*/}
-                    {/*        <li><a href="#"><i className="fa fa-instagram"></i></a></li>*/}
-                    {/*        <li><a href="#"><i className="fa fa-dribbble"></i></a></li>*/}
-                    {/*        <li><a href="#"><i className="fa fa-behance"></i></a></li>*/}
-                    {/*    </ul>*/}
-                    {/*</div>*/}
+                    </div>                    
                   </div>
                   <div className="col-lg-3 col-md-6 column-2">
                     <div className="block block-menu">
@@ -100,24 +93,7 @@ const Footer = () => {
                       <h2 className="block-title">Catalog</h2>
                       <div className="block-content">
                         <ul>
-                          <li>
-                            <a href="#!">Earrings</a>
-                          </li>
-                          <li>
-                            <a href="#!">Necklaces</a>
-                          </li>
-                          <li>
-                            <a href="#!">Bracelets</a>
-                          </li>
-                          <li>
-                            <a href="#!">Rings</a>
-                          </li>
-                          <li>
-                            <a href="#!">Jewelry Box</a>
-                          </li>
-                          <li>
-                            <a href="#!">Studs</a>
-                          </li>
+                            <FooterCat />
                         </ul>
                       </div>
                     </div>
