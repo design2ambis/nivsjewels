@@ -210,3 +210,6 @@ function cart_remove(id,rowid){
             }
         });
     }
+// var mobilemenubtn = document.getElementById("show-megamenu");
+
+// console.log(mobilemenubtn);

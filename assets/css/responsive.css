@@ -434,7 +434,7 @@
     padding: 10px;
     z-index: 10;
     cursor: pointer;
-    display: none;
+    display: block;
     text-align: right;
     display: block;
     padding: 0;
@@ -453,12 +453,13 @@
     font-size: 25px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    display: inline-block;
+    display: block;
     text-align: center;
     line-height: 25px;
     margin-left: 5px;
     position: relative;
     top: 5px;
+    text-align: end;
   }
   .site-mobile-navigation .mm-menu, 
   .site-mobile-vertical .mm-menu {

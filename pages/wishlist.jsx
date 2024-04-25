@@ -20,7 +20,7 @@ const Wishlist = () => {
               Home
             </a>
             <span className="delimiter" />
-            <a href="javascript:void(0) " style={{ color: "#fff" }}>
+            <a href="#!" style={{ color: "#fff" }}>
               Wishlist
             </a>
           </div>
@@ -136,7 +136,7 @@ const Wishlist = () => {
                     </td>
                     <td>
                       <a
-                        href="javascript:void(0)"
+                        href="#!"
                         onclick="wish_remove('<?php echo $row['wId'] ?>','<?php echo $x ?>')"
                         className="edit"
                       >

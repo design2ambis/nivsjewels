@@ -27,13 +27,7 @@ const Relatedproducts = (props) => {
     
     fetchData();
   }, [props]);
-
-  
-
-  
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [props]);
+ 
 
   return (
     <>

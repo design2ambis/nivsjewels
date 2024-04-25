@@ -11,6 +11,11 @@ import Product from "../pages/product";
 import Productdetails from "../pages/productdetails";
 import Cart from "../pages/cart";
 import Login from "../pages/login";
+import Forgotpass from "../pages/forgotpass";
+import Myaccount from "../pages/myaccount";
+import Notfound404 from "../pages/404";
+import Orderdetail from "../pages/order-detail";
+
 
 const Nivs = () => {
   return (
@@ -28,8 +33,12 @@ const Nivs = () => {
         <Route path="/product/:prono" element={<Productdetails/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/forgot" element={<Forgotpass/>} />
+        <Route path="/myaccount" element={<Myaccount/>} />       
+        <Route path="/order-detail/:orderId" element={<Orderdetail/>} />       
+        
 
-        {/* <Route path="*" element={<Error404 />} /> Fallback route for 404 */}
+        <Route path="*" element={<Notfound404 />} /> Fallback route for 404
       </Routes>
       <Footer />
     </BrowserRouter>

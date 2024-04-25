@@ -16,46 +16,54 @@ const Cart = () => {
     }
   }, []);
 
-  const fetchData = async () => {
+  const fetchData = async () => { 
     try {
-      const cartResponse = await fetch('https://nivsjewels.com/api/select?get_cart&token=' + username);
+      const cartResponse = await fetch(
+        "https://nivsjewels.com/api/select?get_cart&token=" + username
+      );
       const cartData = await cartResponse.json();
       if (cartData.status === 200) {
         setCart(cartData.data);
         setIsCount(true);
-        // console.log(cartData.data);                     
+        // console.log(cartData.data);
       } else {
         setIsCount(false);
       }
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
+    setLoad(false);
   };
-
 
   useEffect(() => {
     fetchData();
   }, [username]);
 
   const qty = async (id, qty, type) => {
-
     try {
-      const cartResponse = await fetch(`https://nivsjewels.com/api/update?update_cart&id=${id}&qty=${qty}&type=${type}`);
+      setLoad(true);
+      const cartResponse = await fetch(
+        `https://nivsjewels.com/api/update?update_cart&id=${id}&qty=${qty}&type=${type}`
+      );
       const cartData = await cartResponse.json();
       if (cartData.update_sta === true) {
         fetchData();
       }
+      setLoad(false);
     } catch (error) {
-      console.error('Error updating cart:', error);
+      console.error("Error updating cart:", error);
     }
 
     useEffect(() => {
       // Simulate an API call
       setTimeout(() => {
         setLoad(false);
-      }, 500);
+      }, 1000);
     }, []);
-
+  };
+  
+  if (isLoaded) {
+    return <Loader />;
   }
   return (
     <>
@@ -73,13 +81,13 @@ const Cart = () => {
                   </h1>
                 </div>
                 <div className="breadcrumbs">
-                  <a href="index.php" style={{ color: "#fff" }}>
+                  <a href="/" style={{ color: "#fff" }}>
                     Home
                   </a>
                   <span className="delimiter" />
-                  <a href="javascript:void(0)" style={{ color: "#fff" }}>
+                  <Link to="/cart" style={{ color: "#fff" }}>
                     cart
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -87,162 +95,184 @@ const Cart = () => {
               <div className="section-padding">
                 <div className="section-container p-l-r">
                   <div className="shop-cart">
-
-                    <div className="row">
-                      <div
-                        className="col-lg-8 col-md-12 col-12"
-                        style={{ paddingTop: 20 }}
-                      >
-                        <form className="cart-form" action="#" method="post">
-                          <div className="table-responsive">
-                            <table className="cart-items table" cellSpacing={0}>
-                              <thead>
-                                <tr>
-                                  <th className="product-thumbnail">S.No</th>
-                                  <th className="product-thumbnail">
-                                    Product image
-                                  </th>
-                                  <th className="product-price">Weight</th>
-                                  <th className="product-quantity">Quantity</th>
-                                  <th className="product-subtotal">total</th>
-                                  <th className="product-remove"> remove &nbsp;</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-
-                                <tr
-                                  className="cart-item"
-                                  id="id_<?php echo $row['caId'] ?>"
+                  { isLoggedIn ? (
+                      <>
+                      {isCount ? (
+                          <>
+                            <div className="row">
+                              <div
+                                className="col-lg-12 col-md-12 col-12"
+                                style={{ paddingTop: 20 }}
+                              >
+                                <form
+                                  className="cart-form"
+                                  action="#"
+                                  method="post"
                                 >
-                                  <td> {/*?php echo $x ?*/}</td>
-                                  <td className="product-thumbnail">
-                                    <a href="#">
-                                      <img
-                                        width={600}
-                                        height={600}
-                                        src="<?php echo DESIGN_SITE.$list['design_image'] ?>"
-                                        onerror="this.src='assets/images/No_Image_Available.jpg';"
-                                        className="product-image"
-                                        alt=""
-                                      />
-                                    </a>
-                                    <div className="product-name">
-                                      <a href="#">
-                                        {/*?php echo $list['design_no'] ?*/}
-                                      </a>
-                                    </div>
-                                  </td>
-                                  <td className="product-price">
-                                    <span
-                                      className="price"
-                                      id="weight_<?php echo $x ?>"
+                                  <div className="table-responsive">
+                                    <table
+                                      className="cart-items table"
+                                      cellSpacing={0}
                                     >
-                                      {/*?php echo $list['design_weight'] ?*/}
-                                    </span>
-                                  </td>
-                                  <td className="product-quantity">
-                                    <div
-                                      className="quantity"
-                                      style={{ display: "flex" }}
-                                    >
-                                      <button
-                                        type="button"
-                                        style={{
-                                          backgroundColor: "black",
-                                          color: "white",
-                                          cursor: "pointer"
-                                        }}
-                                        onclick="adjust_qty('-','<?php echo $x ?>','<?php echo $row['caId'] ?>')"
-                                      >
-                                        -
-                                      </button>
-                                      <input
-                                        type="number"
-                                        className="qty"
-                                        min={1}
-                                        max={5}
-                                        name="quantity"
-                                        id="design_quty_<?php echo $x ?>"
-                                        defaultValue="<?php echo $row['caQty'] ?>"
-                                        title="Qty"
-                                        placeholder=""
-                                        inputMode="numeric"
-                                        autoComplete="off"
-                                      />
-                                      <button
-                                        type="button"
-                                        style={{
-                                          backgroundColor: "black",
-                                          color: "white",
-                                          cursor: "pointer"
-                                        }}
-                                        onclick="adjust_qty('+','<?php echo $x ?>','<?php echo $row['caId'] ?>')"
-                                      >
-                                        +
-                                      </button>
-                                    </div>
-                                  </td>
-                                  <td className="product-subtotal">
-                                    <span
-                                      className="eachProweight"
-                                      id="wei_qty_id_<?php echo $x ?>"
-                                    >
-                                      {/*?php 
-    															    $subtotal=$list['design_weight']*$row['caQty'];
-    															    echo number_format($subtotal, 2)
-															    ?*/}
-                                    </span>
-                                  </td>
-                                  <td className="product-remove">
-                                    <a
-                                      href="javascript:void(0)"
-                                      className="remove"
-                                      onclick="cart_remove('<?php echo $row['caId'] ?>','<?php echo $x ?>')"
-                                    >
-                                      REMOVE
-                                    </a>
-                                  </td>
-                                </tr>
-                                {/*?php
-													
-													$total += $subtotal;
-													$x++;} ?*/}
-                                <tr>
-                                  <td colSpan={6} className="actions">
-                                    <div className="bottom-cart">
-                                      <div className="coupon">
-                                        <input
-                                          type="text"
-                                          name="coupon_code"
-                                          className="input-text"
-                                          id="coupon-code"
-                                          defaultValue=""
-                                          placeholder="Coupon code"
-                                        />
-                                        <button
-                                          type="submit"
-                                          name="apply_coupon"
-                                          className="button"
-                                          value="Apply coupon"
-                                        >
-                                          Apply coupon
-                                        </button>
-                                      </div>
-                                      <a
-                                        href="index.php"
-                                        className="checkout-button button"
-                                      >
-                                        CONTINUE SHOPPING
-                                      </a>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </form>
-                      </div>
-                      <div className="col-lg-4 col-md-12 col-12">
+                                      <thead>
+                                        <tr>
+                                          {/* <th className="product-thumbnail">S.No</th> */}
+                                          <th className="product-thumbnail">
+                                            Product image
+                                          </th>
+                                          <th className="product-price">
+                                            Weight
+                                          </th>
+                                          <th className="product-quantity">
+                                            Quantity
+                                          </th>
+                                          <th className="product-subtotal">
+                                            total
+                                          </th>
+                                          <th className="product-remove">
+                                            {" "}
+                                            remove &nbsp;
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        {cart.map((pro) => (
+                                          <tr
+                                            key={pro.caId}
+                                            className="cart-item"
+                                            id={pro.caId}
+                                          >
+                                            {/* <td></td> */}
+                                            <td className="product-thumbnail">
+                                              <a href="#">
+                                                <img
+                                                  width={600}
+                                                  height={600}
+                                                  src={pro.capImg}
+                                                  alt={pro.capName}                                                  
+                                                  className="product-image"
+                                                />
+                                              </a>
+                                              <div className="product-name">
+                                                <a href="#">{pro.capName}</a>
+                                              </div>
+                                            </td>
+                                            <td className="product-price">
+                                              <span className="price">
+                                                {pro.capWgt}
+                                              </span>
+                                            </td>
+                                            <td className="product-quantity">
+                                              <div
+                                                className="quantity"
+                                                style={{ display: "flex" }}
+                                              >
+                                                <button
+                                                  type="button"
+                                                  style={{
+                                                    backgroundColor: "black",
+                                                    color: "white",
+                                                    cursor: "pointer",
+                                                  }}
+                                                  onClick={() =>
+                                                    qty(
+                                                      pro.caId,
+                                                      pro.caQty,
+                                                      "sub"
+                                                    )
+                                                  }
+                                                >
+                                                  -
+                                                </button>
+                                                <input
+                                                  type="number"
+                                                  className="qty"
+                                                  min={1}
+                                                  max={5}
+                                                  name="quantity"
+                                                  id="design_quty_<?php echo $x ?>"
+                                                  readOnly
+                                                  title="Qty"
+                                                  placeholder=""
+                                                  inputMode="numeric"
+                                                  autoComplete="off"
+                                                  value={pro.caQty}
+                                                />
+                                                <button
+                                                  type="button"
+                                                  style={{
+                                                    backgroundColor: "black",
+                                                    color: "white",
+                                                    cursor: "pointer",
+                                                  }}
+                                                  onClick={() =>
+                                                    qty(
+                                                      pro.caId,
+                                                      pro.caQty,
+                                                      "add"
+                                                    )
+                                                  }
+                                                >
+                                                  +
+                                                </button>
+                                              </div>
+                                            </td>
+                                            <td className="product-subtotal">
+                                              <span
+                                                className="eachProweight"
+                                                id="wei_qty_id_<?php echo $x ?>"
+                                              >
+                                                {(parseFloat(pro.caQty) *
+                                                  parseFloat(pro.capWgt)).toFixed(
+                                                  2
+                                                )}
+                                              </span>
+                                            </td>
+                                            <td className="product-remove">
+                                              <a
+                                                href="#!"
+                                                className="remove"
+                                                onClick={() =>
+                                                  qty(
+                                                    pro.caId,
+                                                    pro.caQty,
+                                                    "delete"
+                                                  )
+                                                }
+                                              >
+                                                REMOVE
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        ))}
+                                        <tr>
+                                          <td colSpan={6} className="actions">
+                                            <div className="bottom-cart">
+                                              <div className="coupon">
+                                                <Link
+                                                  to="/"
+                                                  name="apply_coupon"
+                                                  className="button"
+                                                  value="Apply coupon"
+                                                >
+                                                  Continue Shopping
+                                                </Link>
+                                              </div>
+                                              <Link
+                                                to="/checkout"
+                                                className="checkout-button button"
+                                              >
+                                                Checkout
+                                              </Link>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </form>
+                              </div>
+                              {/* <div className="col-lg-4 col-md-12 col-12">
                         <div className="cart-totals">
                           <h2>Cart totals</h2>
                           <div>
@@ -272,38 +302,26 @@ const Cart = () => {
                             </a>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div className="col-12 text-center">
-                      <img src="assets/images/cart_is_empty.png" />
-                    </div>
-
-
-                    <div className="col-12 text-center">
-                      <h3>
-                        Please{" "}
-                        <a
-                          className="active-login"
-                          href="#"
-                          style={{ color: "#cb8161" }}
-                        >
-                          Login
-                        </a>{" "}
-                        to View Cart
-                      </h3>
-                    </div>
-
-                  </div>
-                </div>
-                <div className="shop-cart-empty">
-                  <div className="notices-wrapper">
-                    <p className="cart-empty">Your cart is currently empty.</p>
-                  </div>
-                  <div className="return-to-shop">
-                    <a className="button" href="index.php">
-                      Return to shop
-                    </a>
+                      </div> */}
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="col-12 text-center">
+                              <img src="/assets/images/cart_is_empty.png" />
+                            </div>
+                          </>
+                        )}
+                      </>
+                      ) : (
+                      <>
+                        <div className="col-12 text-center">
+                          <h5>
+                            <Link to="/login">Login</Link> to view Cart
+                          </h5>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -315,8 +333,7 @@ const Cart = () => {
       </div>
       {/* #main-content */}
     </>
+  );
+};
 
-  )
-}
-
-export default Cart
+export default Cart;

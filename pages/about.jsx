@@ -172,24 +172,20 @@ const About = () => {
                               </h2>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                  Join us on this captivating journey as we explore
-                                  the intricate process that sets Nivs Jewels apart in
-                                  the realm of jewelry manufacturing. Discover how our
-                                  artisans delicately weave together creativity and
-                                  precision, transforming raw materials into stunning
-                                  works of wearable art.
+                                At Nivs Jewels, we're not just about creating beautiful pieces; we're about
+                                mastering the art of jewelry and forging meaningful connections within our
+                                community. With passion and precision, our artisans craft each piece to perfection,
+                                ensuring that every detail reflects our commitment to excellence. But our dedication
+                                doesn't stop there.
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                  At the heart of our brand is a dedication to pushing
-                                  the boundaries of traditional craftsmanship,
-                                  embracing innovation while upholding the timeless
-                                  traditions that define the art of jewelry making. As
-                                  you explore our collections, you'll witness the
-                                  seamless blend of contemporary design and classic
-                                  elegance, resulting in pieces that transcend trends
-                                  and stand the test of time.
+                                We believe in the power of jewelry to unite and inspire, which is
+                                why we're deeply invested in building relationships with our customers. Whether it's
+                                through personalized service, community events, or simply sharing stories, we're here
+                                to connect with you on a deeper level. Join us in celebrating the art of jewelry and
+                                the bonds that tie us together.
                                 </p>
                               </div>
                             </div>
@@ -436,31 +432,28 @@ const About = () => {
                             <img
                               width={600}
                               height={440}
-                              src="https://nivsjewels.com/media/banner/intro-about-3.jpg"
+                              src="https://nivsjewels.com/assets/img/charlessir.jpeg"
                               alt="intro"
                             />
                           </div>
                           <div className="section-column right">
                             <div className="intro-wrap">
                               <h2 className="intro-title">
-                                Discover the Essence of Nivs Jewels
+                                Explore the essence of Nivs Jewels
                               </h2>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                  Beyond the allure of gemstones and metals, Nivs
-                                  Jewels is about creating connections. Our pieces are
-                                  more than accessories, they are companions on your
-                                  life's adventures, reflecting the moments,
-                                  milestones, and memories that make you unique.
+                                Welcome to Nivs Jewels, where every piece tells a story of timeless elegance
+                                and unparalleled craftsmanship. As you explore our collection, you'll uncover the
+                                essence of our brand – a celebration of beauty, creativity, and sophistication. 
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                  We invite you to delve into our world, where each
-                                  piece is a testament to the fusion of artistry and
-                                  passion. Thank you for being part of the Nivs Jewels
-                                  story, where every creation is crafted with love and
-                                  destined to become a cherished part of your story.
+                                From exquisite gemstones to meticulously crafted designs, each piece reflects our
+                                dedication to quality and attention to detail.Whether you're seeking a statement
+                                piece for a special occasion or a daily reminder of your unique style, we invite you to
+                                discover the essence of Nivs Jewels and find the perfect expression of yourself.
                                 </p>
                               </div>
                             </div>

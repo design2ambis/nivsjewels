@@ -27,15 +27,15 @@ const IndexCategory = () => {
     return (
         <>
             {categories.map((cat, index) => (               
-                <div className="item item-product-cat slick-slide " key={index}>
+                <div className="col-lg-2 col-sm-6 col-md-2 col-xs-6 col-xl-2 col-xxl-2" key={index}>
                     <div className="item-product-cat-content ">
-                        <Link to={`shop/${cat.cat_name_new}/${cat.sub_name_new}/1`}>
+                        <Link to={`shop/${cat.cat_name_new}/${cat.sub_name_new}/1`} data-set={cat.id} >
                             <div className="item-image animation-horizontal ">
                                 <img
-                                    width={258}
-                                    height={258}
+                                    // width={258}
+                                    // height   ={258}
                                     src={cat.image}
-                                    onError="this.src='assets/images/No_Image_Available.jpg';"
+                                    // onError={this.src='assets/images/No_Image_Available.jpg'}
                                     alt="Bracelets"
                                 />
                             </div>

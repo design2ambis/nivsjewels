@@ -178,8 +178,8 @@ const Index = () => {
                     </div>
                     <div className="block-content ">
                       <div className="product-cats-list slick-wrap ">
-                        <div
-                          className="slick-sliders content-category "
+                        {/* <div
+                          className="slick-sliders content-category"
                           data-dots={0}
                           data-slidestoscroll="true"
                           data-nav={1}
@@ -189,7 +189,10 @@ const Index = () => {
                           data-columns1={3}
                           data-columns1440={5}
                           data-columns={5}
-                        >
+                        > */}
+                        <div className="row">
+                         
+
                           
                           <IndexCategory />
                          
@@ -207,8 +210,10 @@ const Index = () => {
                   <div className="section-column left">
                     <div className="intro-wrap">
                       <h2 className="intro-title">
-                        Handcrafted
-                        <br /> &amp; Ethically Sourced
+                      Hand-fashioned &amp;ethically 
+                      <br/> 
+                      acquired – Crafting Beauty
+                      with Integrity
                       </h2>
                       <div className="intro-item">
                         <div className="icon">
@@ -251,11 +256,12 @@ const Index = () => {
                         <div className="content">
                           <h3 className="title">FAIR PRICING</h3>
                           <div className="text">
-                            Tailoring pricing models to different customer segments,
-                            maintaining competitiveness, and reflecting the
-                            intrinsic value of the jewelry contribute to a strategy
-                            that ensures both profitability and customer
-                            satisfaction.
+                          At Nivs Jewels, we believe in fair pricing that reflects both the quality of our
+                          products and our commitment to customer satisfaction. Our transparent pricing policy
+                          ensures that you receive exceptional value for every purchase. We strive to offer
+                          competitive prices without compromising on the craftsmanship and materials that
+                          make our jewelry special. With us, you can shop with confidence, knowing that you're
+                          getting fair and honest pricing every time.
                           </div>
                         </div>
                       </div>
@@ -281,8 +287,12 @@ const Index = () => {
                         <div className="content">
                           <h3 className="title">HIGH QUALITY</h3>
                           <div className="text">
-                            The Ultimate form of art and craftsmanship expressed
-                            through the language of jewels.
+                          Quality is the cornerstone of everything we do at Nivs Jewels. From the
+                          materials we select to the craftsmanship that goes into each piece, we are dedicated
+                          to delivering excellence. Our commitment to high quality means that every item in
+                          our collection is meticulously crafted to meet the highest standards. When you choose
+                          us, you can trust that you're investing in jewelry that is built to last, timeless in style, and
+                          designed to be cherished for generations to come.
                           </div>
                         </div>
                       </div>

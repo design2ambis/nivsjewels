@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 const Category = () => {
-    const [categories, setCategories] = useState([]);
+    var [categories, setCategories] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,13 +31,13 @@ const Category = () => {
                         <span className="menu-item-text">{category.name}</span>
                     </a>
                     <ul className="sub-menu">
-                    {category.subcat.map((sub) => (
-                        <li key={sub.sid}>
-                            <Link to={`shop/${category.cname}/${sub.sname}/1`} >
-                                <span className="menu-item-text">{sub.name}</span>
-                            </Link>
-                        </li>
-                    ))}
+                        {category.subcat.map((sub) => (
+                            <li key={sub.sid}>
+                                <Link to={`shop/${category.cname}/${sub.sname}/1`} >
+                                    <span className="menu-item-text">{sub.name}</span>
+                                </Link>
+                            </li>
+                        ))}
 
                     </ul>
                 </li>

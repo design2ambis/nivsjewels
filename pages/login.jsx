@@ -3,13 +3,21 @@ import Swal from 'sweetalert2';
 import Loader from '../components/pageloader';
 
 const Login = () => {
+
+
   const [isLoaded, setLoad] = useState(true);
 
-
   const [formData, setFormData] = useState({
+    customerName: '',
+    mobile: '',
+    address: '',
+    phone: '',
+    city: '',
     email: '',
     password: '',
+    register:''
   });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,7 +38,8 @@ const Login = () => {
       var res = await response.json();
       if (res.status === true) {
         localStorage.setItem("token", res.token);
-        setLoad(false);
+        localStorage.setItem("name", res.name);
+        
         Swal.fire({
           icon: "success",
           title: "Welcome",
@@ -49,6 +58,43 @@ const Login = () => {
     } catch (error) {
       console.error('Error during login:', error);
     }
+    setLoad(false);
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const form = new FormData();
+    for (const key in formData) {
+      form.append(key, formData[key]);
+    }
+
+    setLoad(true);
+    try {
+      const response = await fetch("https://nivsjewels.com/api/register", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (data.status === true) {
+        Swal.fire({
+          title: 'Success',
+          text: data.message,
+          icon: 'success'
+        }).then(() => {
+          window.location.href = '/';
+        });
+      } else {
+        Swal.fire({
+          title: 'Failed',
+          text: 'Registration Failed',
+          icon: 'error'
+        });
+      }
+    } catch (error) {
+      console.error("Registration error:", error);
+      // Handle error response from the server
+    }
+    setLoad(false);
   };
 
   useEffect(() => {
@@ -142,36 +188,73 @@ const Login = () => {
                         <h2 className="register">Register</h2>
                         <div className="box-content">
                           <div className="form-register">
-                            <form method="post" className="register">
-                              <div className="email">
-                                <label>
-                                  Email address <span className="required">*</span>
-                                </label>
-                                <input
-                                  type="email"
-                                  className="input-text"
-                                  name="email"
-                                  defaultValue=""
+                            <form onSubmit={handleRegister}>
+                              <label htmlFor="customerName">Customer Name:</label>
+                              <input
+                                type="text"
+                                id="customerName"
+                                name="customerName"
+                                value={formData.customerName}
+                                onChange={handleChange}
+                              />
+
+                              <label htmlFor="mobile">Mobile:</label>
+                              <input
+                                type="text"
+                                id="mobile"
+                                name="mobile"
+                                value={formData.mobile}
+                                onChange={handleChange}
+                              />                            
+                              
+
+                              <label htmlFor="address">Address:</label>
+                              <textarea
+                                id="address"
+                                name="address"
+                                value={formData.address}
+                                onChange={handleChange} 
+                                className="form-control border"
                                 />
-                              </div>
-                              <div className="password">
-                                <label>
-                                  Password <span className="required">*</span>
-                                </label>
-                                <input
-                                  type="password"
-                                  className="input-text"
-                                  name="password"
-                                />
-                              </div>
-                              <div className="button-register">
-                                <input
-                                  type="submit"
-                                  className="button"
-                                  name="register"
-                                  defaultValue="Register"
-                                />
-                              </div>
+
+                              <label htmlFor="phone">Phone:</label>
+                              <input
+                                type="text"
+                                id="phone"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                              />
+
+                              <label htmlFor="city">City:</label>
+                              <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                value={formData.city}
+                                onChange={handleChange}
+                              />
+
+                              <label htmlFor="email">Email:</label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                              />
+
+                              <label htmlFor="password">Password:</label>
+                              <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                              />
+                              <center>
+                                <button type="submit" style={{marginTop: '12px'}} className='btn btn-block btn-primary m-2'>Register</button>
+                              </center>
                             </form>
                           </div>
                         </div>
