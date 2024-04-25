@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import Loader from '../components/pageloader';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -179,6 +180,9 @@ const Login = () => {
                                 />
                               </div>
                             </form>
+                          </div>
+                          <div className='text-center'>
+                            <Link to={'/forgot-password'} className='btn btn-link'>Forgot Password?</Link>                           
                           </div>
                         </div>
                       </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Nivs from './app-new';
+import App from './app';
 
 
 ReactDOM.createRoot(document.getElementById('nivs')).render(
   <React.StrictMode>
-    <Nivs />
+    <App />
   </React.StrictMode>
 );
