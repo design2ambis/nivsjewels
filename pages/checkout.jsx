@@ -4,6 +4,7 @@ import Loader from "../components/pageloader";
 import Swal from 'sweetalert2';
 
 const Checkout = () => {
+  document.title = "Nivsjewels - Checkout";
 
   const [isLoaded, setLoad] = useState(true);
   const [cart, setCart] = useState([]);

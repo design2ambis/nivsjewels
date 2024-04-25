@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Loader from '../components/pageloader';
 
 const Forgotpass = () => {
+  document.title = "Nivsjewels - Forgotpassword";
   const [isLoaded, setLoad] = useState(true);
   useEffect(() => {
     // Simulate an API call

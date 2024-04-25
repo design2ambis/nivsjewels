@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Gridproduct from '../components/Gridproduct';
 
 const Product = () => {
-
-  let navigate = useNavigate();
+  
   const { cat, subcat, page } = useParams();
 
   return (

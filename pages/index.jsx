@@ -5,6 +5,7 @@ import Loader from "../components/pageloader";
 
 
 const Index = () => {
+  document.title = "Nivsjewels - Home";
   return (
     <>
     <Loader />

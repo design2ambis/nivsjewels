@@ -4,6 +4,7 @@ import Loader from '../components/pageloader';
 
 
 const Orderdetail = (props) => {
+    document.title = "Nivsjewels - Orderdetail";
     const [isLoaded, setLoad] = useState(true);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [cart, setCart] = useState([]);

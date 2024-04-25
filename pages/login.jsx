@@ -4,6 +4,7 @@ import Loader from '../components/pageloader';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+  document.title = "Nivsjewels - Login";
 
 
   const [isLoaded, setLoad] = useState(true);

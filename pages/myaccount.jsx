@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Myaccount = () => {
+  document.title = "Nivsjewels - Myaccount";
   const [isLoaded, setLoad] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isCount, setIsCount] = useState(false);
@@ -11,13 +12,12 @@ const Myaccount = () => {
 
   const username = localStorage.getItem("token");
   const name = localStorage.getItem("name");
- 
- 
+
+
 
   useEffect(() => {
     if (username !== null) {
       setIsLoggedIn(true);
-      
     }
   }, []);
 
@@ -80,7 +80,7 @@ const Myaccount = () => {
               </div>
               <div className="breadcrumbs" style={{ color: "#fff" }}>
                 <a href="/" style={{ color: "#fff" }}>Home</a>
-                <span className="delimiter" style={{ color: "#fff" }}/>
+                <span className="delimiter" style={{ color: "#fff" }} />
                 My Account
               </div>
             </div>
@@ -173,7 +173,7 @@ const Myaccount = () => {
                                               <th>Sno</th>
                                               <th>Order</th>
                                               <th>Qty</th>
-                                              <th>Status</th>                                              
+                                              <th>Status</th>
                                               <th>Actions</th>
                                             </tr>
                                           </thead>
@@ -181,10 +181,10 @@ const Myaccount = () => {
                                             {cart.map((pro, index) => (
 
                                               <tr key={pro.id}>
-                                                <td>{index+1}</td>
+                                                <td>{index + 1}</td>
                                                 <td>NI-{pro.Orderno}</td>
                                                 <td>{pro.Qty}</td>
-                                                <td>{Status(pro.OSta)}</td>                                                
+                                                <td>{Status(pro.OSta)}</td>
                                                 <td>
                                                   <Link to={`/order-detail/${pro.id}`} className="btn-small d-block">
                                                     View
@@ -350,8 +350,8 @@ const Myaccount = () => {
                             <>
                               <div className='text-center mb-3'>
                                 {/* <h5>You have no orders</h5> */}
-{/* Suggested code may be subject to a license. Learn more: ~LicenseLog:3978053137. */}
-                                <img className='img-fluid' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a3be1258142655.59f70a0604f55.gif" alt="No Orders" width="500px" style={{marginBottom: '70px'}} />
+                                {/* Suggested code may be subject to a license. Learn more: ~LicenseLog:3978053137. */}
+                                <img className='img-fluid' src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a3be1258142655.59f70a0604f55.gif" alt="No Orders" width="500px" style={{ marginBottom: '70px' }} />
                               </div>
                             </>
                           )

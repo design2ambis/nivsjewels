@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Loader from "../components/pageloader";
 
 const Cart = () => {
+  document.title = "Nivsjewels - Cart";
   const [isLoaded, setLoad] = useState(true);
   const [cart, setCart] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);

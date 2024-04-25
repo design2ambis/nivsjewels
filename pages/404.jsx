@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Loader from '../components/pageloader';
 
 const Notfound404 = () => {
+
+    const [isLoaded, setLoad] = useState(true);
+    useEffect(() => {
+        // Simulate an API call
+        setTimeout(() => {
+            setLoad(false);
+        }, 500);
+    }, []);
+
+    if (isLoaded) {
+        return <Loader />;
+    }
+    document.title = "404 Not Found";
     return (
         <>
             <div id="site-main" className="site-main">

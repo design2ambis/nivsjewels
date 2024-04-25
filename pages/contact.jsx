@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import Loader from "../components/pageloader";
 
 const Contact = () => {
+  document.title = "Nivsjewels - Contactus";
   const [isLoaded, setLoad] = useState(true);
 
 

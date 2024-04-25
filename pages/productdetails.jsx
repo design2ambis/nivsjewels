@@ -135,7 +135,7 @@ const Productdetails = () => {
     }));
   }, [product]);
 
-
+  document.title = "Nivsjewels - Product Detail";
   return (
     <div id="site-main" className="site-main">
       <div id="main-content" className="main-content">

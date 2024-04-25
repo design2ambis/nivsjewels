@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Loader from "../components/pageloader";
 const Gridproduct = (props) => {
   // const { cat, subcat, page } = useParams();
 
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [isCount, setCount] = useState(false);
   const [pages, setPage] = useState([]);
   const [isLoaded, setLoad] = useState(true);
 
+  document.title = `Nivsjewels - shop/${props.cat}/${props.subcat}`;
 
   useEffect(() => {
     setLoad(true);
