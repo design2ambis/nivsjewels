@@ -44,9 +44,9 @@ const About = () => {
             </div>
             <div id="content" className="site-content" role="main">
               <div className="page-about-us">
-                <section className="section section-padding m-t-20 m-b-70">
+                {/* <section className="section section-padding m-t-20 m-b-70">
                   <div className="section-container">
-                    {/* Block Banners */}
+                   
                     <div className="block block-banners banners-effect">
                       <div className="block-widget-wrap">
                         <div className="row">
@@ -102,7 +102,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                </section>
+                </section> */}
                 <section className="section section-padding m-b-70">
                   <div className="section-container">
                     {/* Block Intro (Layout 5) */}
@@ -110,49 +110,18 @@ const About = () => {
                       <div className="block-widget-wrap">
                         <div className="intro-wrap">
                           <div className="intro-icon animation-horizontal">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              id="Capa_1"
-                              height={512}
-                              viewBox="0 0 512.001 512.001"
-                              width={512}
-                            >
-                              <g>
-                                <g>
-                                  <g>
-                                    <g>
-                                      <path d="m479.371 131.029c-3.099 0-6.154-1.436-8.11-4.139-3.236-4.475-2.233-10.727 2.241-13.963l22.638-16.376c4.475-3.239 10.727-2.233 13.964 2.241 3.236 4.475 2.233 10.727-2.241 13.963l-22.638 16.376c-1.772 1.281-3.823 1.898-5.854 1.898z" />
-                                    </g>
-                                  </g>
-                                  <g>
-                                    <g>
-                                      <path d="m32.63 131.029c-2.032 0-4.082-.617-5.854-1.898l-22.637-16.376c-4.475-3.237-5.478-9.488-2.241-13.963 3.238-4.474 9.49-5.478 13.964-2.241l22.638 16.375c4.475 3.237 5.478 9.488 2.241 13.963-1.956 2.703-5.012 4.14-8.111 4.14z" />
-                                    </g>
-                                  </g>
-                                  <g>
-                                    <g>
-                                      <path d="m256.001 49.025c-5.522 0-10-4.477-10-10v-23.867c0-5.523 4.478-10 10-10s10 4.477 10 10v23.866c0 5.523-4.478 10.001-10 10.001z" />
-                                    </g>
-                                  </g>
-                                  <g>
-                                    <path d="m492.647 215.277-77.499-133.949c-1.787-3.09-5.086-4.992-8.655-4.992h-300.986c-3.569 0-6.868 1.902-8.655 4.992l-77.498 133.949c-2.092 3.614-1.717 8.147.939 11.369l227.991 276.558c1.899 2.305 4.729 3.639 7.716 3.639s5.816-1.334 7.716-3.639l85.631-103.871 1.009.399 22.572 57.368c1.505 3.824 5.196 6.338 9.306 6.338s7.801-2.514 9.306-6.338l22.572-57.368 57.228-22.623c3.817-1.509 6.324-5.196 6.324-9.3s-2.507-7.791-6.323-9.3l-57.229-22.623-4.026-10.231 81.621-99.009c2.657-3.222 3.032-7.754.94-11.369zm-25.994-4.992h-113.904l53.737-103.991zm-210.652 248.864-67.465-228.863h22.259c5.522 0 10-4.477 10-10s-4.478-10-10-10h-17.303l62.508-102.427 62.508 102.426h-17.301c-5.522 0-10 4.477-10 10s4.478 10 10 10h22.26zm79.601-259.246-63.204-103.567h116.722zm-167.918 30.382 65.943 223.697-184.414-223.697zm8.713-30.382-53.517-103.567h116.722zm-70.883-93.609 53.736 103.991h-113.902zm172.86 347.689 21.836-74.074 29.588 11.696zm162.089-86.174-37.741 14.919c-2.577 1.019-4.615 3.06-5.63 5.638l-14.857 37.76-14.857-37.76c-1.015-2.578-3.053-4.62-5.63-5.638l-37.741-14.919 37.742-14.92c2.576-1.019 4.614-3.06 5.629-5.638l14.857-37.76 14.857 37.76c1.015 2.578 3.053 4.62 5.629 5.638zm-48.923-89.291c-1.505-3.824-5.196-6.338-9.306-6.338s-7.801 2.514-9.306 6.338l-22.572 57.368-42.071 16.631 36.032-122.232h118.47l-61.075 74.087z" />
-                                    <g>
-                                      <path d="m256.18 230.291c-4.12 0-7.897-2.638-9.35-6.483-1.491-3.948-.269-8.58 3.006-11.255 3.235-2.643 7.897-2.987 11.481-.842 3.583 2.144 5.496 6.426 4.674 10.529-.924 4.61-5.103 8.051-9.811 8.051z" />
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
+                            <img
+                              width={50}
+                              height={50}
+                              src="assets/images/logo.png"
+                              alt="intro"
+                            />
                           </div>
                           <h2 className="intro-title">Where It All Began</h2>
                           <div className="intro-text">
                             <p>
-                              Welcome to the enchanting world of Nivs Jewels, where
-                              the alchemy of artistry and passion gives birth to
-                              extraordinary jewelry pieces. Immerse yourself in the
-                              essence of our brand as we unveil the secrets behind our
-                              unparalleled craftsmanship and meticulous attention to
-                              detail.
+                              Adorn your spirit with the brilliance of NIVS JEWELS, where
+                              every gem tells a story of timeless elegance and inner radiance.
                             </p>
                           </div>
                         </div>
@@ -160,6 +129,59 @@ const About = () => {
                     </div>
                   </div>
                 </section>
+
+                <section className="section section-padding background-13 p-t-70 p-b-70 m-b-70">
+                  <div className="section-container">
+                    {/* Block Intro (Layout 7) */}
+                    <div className="block block-intro layout-7">
+                      <div className="block-widget-wrap">
+                        <div className="row">
+                          <div className="section-column left animation-horizontal hover-opacity">
+                            <img
+                              width={600}
+                              height={440}
+                              src="assets/img/sir.jpeg"
+                              alt="intro"
+                            />
+                          </div>
+                          <div className="section-column right">
+                            <div className="intro-wrap">
+                              <h2 className="intro-title" style={{ textAlign: "justify" }}>
+                                Essence of Nivs Jewels
+                              </h2>
+                              <div className="intro-item m-b-0">
+                                <p style={{ textAlign: "justify" }}>
+                                NIVS JEWELS was founded by Mr. Charles Duraisamy Mathiyalagan, an
+                                entrepreneur with extensive experience in Gold manufacturing and wholesale
+                                Business<br/>
+                                His journey began in 1999 as a Production Planner at Emerald Jewel
+                                Industry Company and he travelled in that role until 2007. During this time, he
+                                gained exposure to various departments involved in gold manufacturing,
+                                including process management, product variety, gold quality assurance,
+                                addressing product issues, overseeing the manufacturing process, taking new
+                                orders, and ensuring on-time delivery with good quality.
+                                 
+                                </p>
+                              </div>
+                              <div className="intro-item m-b-0">
+                                <p style={{ textAlign: "justify" }}>
+                                In 2008, he commenced international trading in the gold market in
+                                Malaysia. During this period, he learned how to trade in jewelry, including gold
+                                and silver, under rules and regulations. He gained experience in banking,
+                                export, and import processes for 916 jewels from India to Malaysia. Additionally,
+                                he initiated a jewelry wholesale business in retail markets in Malaysia, acquiring
+                                knowledge about wholesale jewelry pricing and calculations.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+
                 <section className="section section-padding background-img bg-img-2 p-t-70 p-b-70 m-b-70">
                   <div className="section-container">
                     {/* Block Intro (Layout 6) */}
@@ -173,20 +195,26 @@ const About = () => {
                               </h2>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                At Nivs Jewels, we're not just about creating beautiful pieces; we're about
-                                mastering the art of jewelry and forging meaningful connections within our
-                                community. With passion and precision, our artisans craft each piece to perfection,
-                                ensuring that every detail reflects our commitment to excellence. But our dedication
-                                doesn't stop there.
+                                During his wholesale business venture in retail markets, he gained insight
+                                into retailers’ expectations, encompassing aspects such as product design,
+                                gold quality, payment options, handling bulk orders, managing customer
+                                orders, facilitating customized and bespoke designs, providing customization
+                                options, offering marketing support, and ensuring excellent customer service.<br/>
+                                Until 2017, he gained experience in various aspects including billing,
+                                international bank transactions, purchasing gold and bullion, acquiring
+                                knowledge about conversion rates, and managing profit accounts.
+                                
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                We believe in the power of jewelry to unite and inspire, which is
-                                why we're deeply invested in building relationships with our customers. Whether it's
-                                through personalized service, community events, or simply sharing stories, we're here
-                                to connect with you on a deeper level. Join us in celebrating the art of jewelry and
-                                the bonds that tie us together.
+                                In 2018, he launched his own gold manufacturing business and named
+                                it NIVS JEWELS. Initially, our focus was on handcrafted designs because they
+                                are fast-moving products that satisfy our customers. Handcrafted jewelry tends
+                                to have a lighter weight but makes a significant visual impact. However, during
+                                this period, our business suffered due to a lack of quality. Consequently, we
+                                shifted our focus to prioritize the highest quality standards, ensuring timely
+                                delivery, and upholding our commitments to our customers.
                                 </p>
                               </div>
                             </div>
@@ -208,7 +236,7 @@ const About = () => {
                                   <img
                                     width={330}
                                     height={419}
-                                    src="assets/images/about5.png"
+                                    src="assets/img/goldbar1.png"
                                     alt="intro"
                                   />
                                 </div>
@@ -220,9 +248,9 @@ const About = () => {
                     </div>
                   </div>
                 </section>
-                <section className="section section-padding m-b-70">
+                {/* <section className="section section-padding m-b-70">
                   <div className="section-container">
-                    {/* Block Feature (Layout 2) */}
+                    
                     <div className="block block-feature layout-2">
                       <div className="block-widget-wrap">
                         <div className="row">
@@ -312,9 +340,7 @@ const About = () => {
                               </div>
                               <div className="box-title-wrap">
                                 <h3 className="box-title">Shipping Worldwide</h3>
-                                {/*<p class="box-description">*/}
-                                {/*		Lorem ipsum dolor sit amet, consectetur adipiscing elit */}
-                                {/*</p>*/}
+                                
                               </div>
                             </div>
                           </div>
@@ -367,9 +393,7 @@ const About = () => {
                               </div>
                               <div className="box-title-wrap">
                                 <h3 className="box-title">14 Days Return</h3>
-                                {/*<p class="box-description">*/}
-                                {/*		Lorem ipsum dolor sit amet, consectetur adipiscing elit */}
-                                {/*</p>*/}
+                                
                               </div>
                             </div>
                           </div>
@@ -412,11 +436,62 @@ const About = () => {
                               </div>
                               <div className="box-title-wrap">
                                 <h3 className="box-title">Security Payment</h3>
-                                {/*<p class="box-description">*/}
-                                {/*		Lorem ipsum dolor sit amet, consectetur adipiscing elit */}
-                                {/*</p>*/}
+                                
                               </div>
                             </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section> */}
+                <section className="section section-padding m-b-70">
+                  <div className="section-container">
+                    {/* Block Intro (Layout 5) */}
+                    <div className="block block-intro layout-5 text-center">
+                      <div className="block-widget-wrap">
+                        <div className="intro-wrap">
+                          <div className="intro-icon animation-horizontal">
+                            <svg
+                              // xmlns="http://www.w3.org/2000/svg"
+                              // id="Capa_1"
+                              // height={512}
+                              // viewBox="0 0 512.001 512.001"
+                              // width={512}
+                            >
+                              <g>
+                                <g>
+                                  <g>
+                                    <g>
+                                      <path d="m479.371 131.029c-3.099 0-6.154-1.436-8.11-4.139-3.236-4.475-2.233-10.727 2.241-13.963l22.638-16.376c4.475-3.239 10.727-2.233 13.964 2.241 3.236 4.475 2.233 10.727-2.241 13.963l-22.638 16.376c-1.772 1.281-3.823 1.898-5.854 1.898z" />
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <g>
+                                      <path d="m32.63 131.029c-2.032 0-4.082-.617-5.854-1.898l-22.637-16.376c-4.475-3.237-5.478-9.488-2.241-13.963 3.238-4.474 9.49-5.478 13.964-2.241l22.638 16.375c4.475 3.237 5.478 9.488 2.241 13.963-1.956 2.703-5.012 4.14-8.111 4.14z" />
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <g>
+                                      <path d="m256.001 49.025c-5.522 0-10-4.477-10-10v-23.867c0-5.523 4.478-10 10-10s10 4.477 10 10v23.866c0 5.523-4.478 10.001-10 10.001z" />
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <path d="m492.647 215.277-77.499-133.949c-1.787-3.09-5.086-4.992-8.655-4.992h-300.986c-3.569 0-6.868 1.902-8.655 4.992l-77.498 133.949c-2.092 3.614-1.717 8.147.939 11.369l227.991 276.558c1.899 2.305 4.729 3.639 7.716 3.639s5.816-1.334 7.716-3.639l85.631-103.871 1.009.399 22.572 57.368c1.505 3.824 5.196 6.338 9.306 6.338s7.801-2.514 9.306-6.338l22.572-57.368 57.228-22.623c3.817-1.509 6.324-5.196 6.324-9.3s-2.507-7.791-6.323-9.3l-57.229-22.623-4.026-10.231 81.621-99.009c2.657-3.222 3.032-7.754.94-11.369zm-25.994-4.992h-113.904l53.737-103.991zm-210.652 248.864-67.465-228.863h22.259c5.522 0 10-4.477 10-10s-4.478-10-10-10h-17.303l62.508-102.427 62.508 102.426h-17.301c-5.522 0-10 4.477-10 10s4.478 10 10 10h22.26zm79.601-259.246-63.204-103.567h116.722zm-167.918 30.382 65.943 223.697-184.414-223.697zm8.713-30.382-53.517-103.567h116.722zm-70.883-93.609 53.736 103.991h-113.902zm172.86 347.689 21.836-74.074 29.588 11.696zm162.089-86.174-37.741 14.919c-2.577 1.019-4.615 3.06-5.63 5.638l-14.857 37.76-14.857-37.76c-1.015-2.578-3.053-4.62-5.63-5.638l-37.741-14.919 37.742-14.92c2.576-1.019 4.614-3.06 5.629-5.638l14.857-37.76 14.857 37.76c1.015 2.578 3.053 4.62 5.629 5.638zm-48.923-89.291c-1.505-3.824-5.196-6.338-9.306-6.338s-7.801 2.514-9.306 6.338l-22.572 57.368-42.071 16.631 36.032-122.232h118.47l-61.075 74.087z" />
+                                    <g>
+                                      <path d="m256.18 230.291c-4.12 0-7.897-2.638-9.35-6.483-1.491-3.948-.269-8.58 3.006-11.255 3.235-2.643 7.897-2.987 11.481-.842 3.583 2.144 5.496 6.426 4.674 10.529-.924 4.61-5.103 8.051-9.811 8.051z" />
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
+                          </div>
+                          <h2 className="intro-title">Covid Pandemic</h2>
+                          <div className="intro-text">
+                            <p>
+                            Through the darkness of the pandemic, we found resilience in unity and
+                            hope in the promise of tomorrow, we emerged stronger together
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -425,7 +500,7 @@ const About = () => {
                 </section>
                 <section className="section section-padding background-13 p-t-70 p-b-70 m-b-70">
                   <div className="section-container">
-                    {/* Block Intro (Layout 7) */}
+                   
                     <div className="block block-intro layout-7">
                       <div className="block-widget-wrap">
                         <div className="row">
@@ -433,28 +508,39 @@ const About = () => {
                             <img
                               width={600}
                               height={440}
-                              src="https://nivsjewels.com/assets/img/charlessir.jpeg"
+                              src="assets/img/nivsbanner.png"
                               alt="intro"
                             />
                           </div>
                           <div className="section-column right">
                             <div className="intro-wrap">
                               <h2 className="intro-title">
-                                Explore the essence of Nivs Jewels
+                                Nivs Jewels
                               </h2>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                Welcome to Nivs Jewels, where every piece tells a story of timeless elegance
-                                and unparalleled craftsmanship. As you explore our collection, you'll uncover the
-                                essence of our brand – a celebration of beauty, creativity, and sophistication. 
+                                In November 2019, a massive pandemic began due to the virus Covid-
+                                19 (Coronavirus). This global health crisis had profound impacts, resulting in the
+                                downturn of numerous businesses worldwide.<br/>
+                                During this pandemic, we supported our workers by providing for their
+                                needs, including food and accommodation, as we traveled alongside them.
+                                Despite the challenges, we generated new ideas and designs, launching them
+                                into the market and successfully revitalizing our business statistics.
+                                We launched AMBIS GROUP, our new venture in software development.
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                From exquisite gemstones to meticulously crafted designs, each piece reflects our
-                                dedication to quality and attention to detail.Whether you're seeking a statement
-                                piece for a special occasion or a daily reminder of your unique style, we invite you to
-                                discover the essence of Nivs Jewels and find the perfect expression of yourself.
+                                We specialize in creating customized e-commerce websites for retailers
+                                looking to thrive in today's market. During the pandemic, we supported
+                                retailers hit hard by the decline in jewelry sales through digital marketing efforts.
+                                We also connected wholesale manufacturers with retailers, expanding our
+                                client base to include B2B customers.<br/>
+                                We extended our business reach by launching operations in Malaysia
+                                and Dubai. Additionally, we initiated consultancy services for jewelry
+                                manufacturers, offering comprehensive solutions to meet their various needs.
+                                This is how we've grown alongside our team, thriving in the business
+                                world. Enter NIVS JEWELS to discover the beauty within you. 
                                 </p>
                               </div>
                             </div>

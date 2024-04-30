@@ -2129,7 +2129,7 @@ input[type=password] {
 }
 
 .section.bg-img-2 {
-  background-image: url("../../media/banner/bg-img-2.jpg");
+  background-image: url("assets/img/bg-img-2.jpg");
 }
 
 [class~=pagination] ul li a:hover,
@@ -2170,7 +2170,7 @@ input[type=password] {
 }
 
 [class~=section][class~=bg-img-7] {
-  background-image: url("../../media/banner/bg-img-7.jpg");
+  background-image: url("assets/img/bg-img-7.jpg");
 }
 
 [class~=button-outline][class~=border-black]:focus {

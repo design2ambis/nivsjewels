@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Loader from '../components/pageloader';
 
 const Wishlist = () => {
+  document.title = "Nivsjewels - Wishlist";
   const [isLoaded, setLoad] = useState(true);
   useEffect(() => {
     // Simulate an API call

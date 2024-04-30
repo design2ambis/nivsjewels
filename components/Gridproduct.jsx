@@ -10,7 +10,7 @@ const Gridproduct = (props) => {
   const [pages, setPage] = useState([]);
   const [isLoaded, setLoad] = useState(true);
 
-  document.title = `Nivsjewels - shop/${props.cat}/${props.subcat}`;
+  document.title = `Nivsjewels - ${props.cat} | ${props.subcat}`;
 
   useEffect(() => {
     setLoad(true);
