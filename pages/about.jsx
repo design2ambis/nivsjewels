@@ -1,10 +1,9 @@
-import React,{useState,useEffect} from 'react'
-import Loader from '../components/pageloader';
+import React, { useState, useEffect } from "react";
+import Loader from "../components/pageloader";
 
 const About = () => {
   document.title = "Nivsjewels - Aboutus";
   const [isLoaded, setLoad] = useState(true);
-
 
   useEffect(() => {
     // Simulate an API call
@@ -19,7 +18,7 @@ const About = () => {
 
   return (
     <>
-    {/* <Loader status={false}/> */}
+      {/* <Loader status={false}/> */}
       <div id="site-main" className="site-main">
         <div id="main-content" className="main-content">
           <div id="primary" className="content-area">
@@ -120,8 +119,9 @@ const About = () => {
                           <h2 className="intro-title">Where It All Began</h2>
                           <div className="intro-text">
                             <p>
-                              Adorn your spirit with the brilliance of NIVS JEWELS, where
-                              every gem tells a story of timeless elegance and inner radiance.
+                              Adorn your spirit with the brilliance of NIVS
+                              JEWELS, where every gem tells a story of timeless
+                              elegance and inner radiance.
                             </p>
                           </div>
                         </div>
@@ -136,41 +136,61 @@ const About = () => {
                     <div className="block block-intro layout-7">
                       <div className="block-widget-wrap">
                         <div className="row">
-                          <div className="section-column left animation-horizontal hover-opacity">
-                            <img
-                              width={600}
-                              height={440}
-                              src="assets/img/sir.jpeg"
-                              alt="intro"
-                            />
+                          <div className="section-column left animation-horizontal hover-opacity" style={{display: 'block'}}>
+                            <div>
+                              <img
+                                width={600}
+                                height={440}
+                                src="/assets/img/charles.jpeg"
+                                alt="intro"
+                              />
+                            </div>
+                            <div>
+                              <div className="flex text-center">
+                                <h3 className="text-center">Mr. Charles DM</h3>
+                              </div>
+                            </div>
                           </div>
                           <div className="section-column right">
                             <div className="intro-wrap">
-                              <h2 className="intro-title" style={{ textAlign: "justify" }}>
+                              <h2
+                                className="intro-title"
+                                style={{ textAlign: "center" }}
+                              >
                                 Essence of Nivs Jewels
                               </h2>
                               <div className="intro-item m-b-0">
-                                <p style={{ textAlign: "justify" }}>
-                                NIVS JEWELS was founded by Mr. Charles Duraisamy Mathiyalagan, an
-                                entrepreneur with extensive experience in Gold manufacturing and wholesale
-                                Business<br/>
-                                His journey began in 1999 as a Production Planner at Emerald Jewel
-                                Industry Company and he travelled in that role until 2007. During this time, he
-                                gained exposure to various departments involved in gold manufacturing,
-                                including process management, product variety, gold quality assurance,
-                                addressing product issues, overseeing the manufacturing process, taking new
-                                orders, and ensuring on-time delivery with good quality.
-                                 
+                                <p style={{ textIndent: '50px',textAlign: 'justify'}}>
+                                  NIVS JEWELS was founded by Mr. Charles
+                                  Duraisamy Mathiyalagan, an entrepreneur with
+                                  extensive experience in Gold manufacturing and
+                                  wholesale Business
+                                  <br />
+                                  His journey began in 1999 as a Production
+                                  Planner at Emerald Jewel Industry Company and
+                                  he travelled in that role until 2007. During
+                                  this time, he gained exposure to various
+                                  departments involved in gold manufacturing,
+                                  including process management, product variety,
+                                  gold quality assurance, addressing product
+                                  issues, overseeing the manufacturing process,
+                                  taking new orders, and ensuring on-time
+                                  delivery with good quality.
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                In 2008, he commenced international trading in the gold market in
-                                Malaysia. During this period, he learned how to trade in jewelry, including gold
-                                and silver, under rules and regulations. He gained experience in banking,
-                                export, and import processes for 916 jewels from India to Malaysia. Additionally,
-                                he initiated a jewelry wholesale business in retail markets in Malaysia, acquiring
-                                knowledge about wholesale jewelry pricing and calculations.
+                                  In 2008, he commenced international trading in
+                                  the gold market in Malaysia. During this
+                                  period, he learned how to trade in jewelry,
+                                  including gold and silver, under rules and
+                                  regulations. He gained experience in banking,
+                                  export, and import processes for 916 jewels
+                                  from India to Malaysia. Additionally, he
+                                  initiated a jewelry wholesale business in
+                                  retail markets in Malaysia, acquiring
+                                  knowledge about wholesale jewelry pricing and
+                                  calculations.
                                 </p>
                               </div>
                             </div>
@@ -181,7 +201,6 @@ const About = () => {
                   </div>
                 </section>
 
-
                 <section className="section section-padding background-img bg-img-2 p-t-70 p-b-70 m-b-70">
                   <div className="section-container">
                     {/* Block Intro (Layout 6) */}
@@ -191,30 +210,43 @@ const About = () => {
                           <div className="section-column left">
                             <div className="intro-wrap">
                               <h2 className="intro-title">
-                                We Know Jewellery – <br /> &amp; We Know Our Customers
+                                We Know Jewellery – <br /> &amp; We Know Our
+                                Customers
                               </h2>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                During his wholesale business venture in retail markets, he gained insight
-                                into retailers’ expectations, encompassing aspects such as product design,
-                                gold quality, payment options, handling bulk orders, managing customer
-                                orders, facilitating customized and bespoke designs, providing customization
-                                options, offering marketing support, and ensuring excellent customer service.<br/>
-                                Until 2017, he gained experience in various aspects including billing,
-                                international bank transactions, purchasing gold and bullion, acquiring
-                                knowledge about conversion rates, and managing profit accounts.
-                                
+                                  During his wholesale business venture in
+                                  retail markets, he gained insight into
+                                  retailers’ expectations, encompassing aspects
+                                  such as product design, gold quality, payment
+                                  options, handling bulk orders, managing
+                                  customer orders, facilitating customized and
+                                  bespoke designs, providing customization
+                                  options, offering marketing support, and
+                                  ensuring excellent customer service.
+                                  <br />
+                                  Until 2017, he gained experience in various
+                                  aspects including billing, international bank
+                                  transactions, purchasing gold and bullion,
+                                  acquiring knowledge about conversion rates,
+                                  and managing profit accounts.
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                In 2018, he launched his own gold manufacturing business and named
-                                it NIVS JEWELS. Initially, our focus was on handcrafted designs because they
-                                are fast-moving products that satisfy our customers. Handcrafted jewelry tends
-                                to have a lighter weight but makes a significant visual impact. However, during
-                                this period, our business suffered due to a lack of quality. Consequently, we
-                                shifted our focus to prioritize the highest quality standards, ensuring timely
-                                delivery, and upholding our commitments to our customers.
+                                  In 2018, he launched his own gold
+                                  manufacturing business and named it NIVS
+                                  JEWELS. Initially, our focus was on
+                                  handcrafted designs because they are
+                                  fast-moving products that satisfy our
+                                  customers. Handcrafted jewelry tends to have a
+                                  lighter weight but makes a significant visual
+                                  impact. However, during this period, our
+                                  business suffered due to a lack of quality.
+                                  Consequently, we shifted our focus to
+                                  prioritize the highest quality standards,
+                                  ensuring timely delivery, and upholding our
+                                  commitments to our customers.
                                 </p>
                               </div>
                             </div>
@@ -226,7 +258,7 @@ const About = () => {
                                   <img
                                     width={262}
                                     height={333}
-                                    src="assets/images/about4.png"
+                                    src="/assets/images/about4.png"
                                     alt="intro"
                                   />
                                 </div>
@@ -236,7 +268,7 @@ const About = () => {
                                   <img
                                     width={330}
                                     height={419}
-                                    src="assets/img/goldbar1.png"
+                                    src="/assets/img/goldbar1.png"
                                     alt="intro"
                                   />
                                 </div>
@@ -453,11 +485,11 @@ const About = () => {
                         <div className="intro-wrap">
                           <div className="intro-icon animation-horizontal">
                             <svg
-                              // xmlns="http://www.w3.org/2000/svg"
-                              // id="Capa_1"
-                              // height={512}
-                              // viewBox="0 0 512.001 512.001"
-                              // width={512}
+                            // xmlns="http://www.w3.org/2000/svg"
+                            // id="Capa_1"
+                            // height={512}
+                            // viewBox="0 0 512.001 512.001"
+                            // width={512}
                             >
                               <g>
                                 <g>
@@ -489,8 +521,9 @@ const About = () => {
                           <h2 className="intro-title">Covid Pandemic</h2>
                           <div className="intro-text">
                             <p>
-                            Through the darkness of the pandemic, we found resilience in unity and
-                            hope in the promise of tomorrow, we emerged stronger together
+                              Through the darkness of the pandemic, we found
+                              resilience in unity and hope in the promise of
+                              tomorrow, we emerged stronger together
                             </p>
                           </div>
                         </div>
@@ -500,7 +533,6 @@ const About = () => {
                 </section>
                 <section className="section section-padding background-13 p-t-70 p-b-70 m-b-70">
                   <div className="section-container">
-                   
                     <div className="block block-intro layout-7">
                       <div className="block-widget-wrap">
                         <div className="row">
@@ -508,39 +540,50 @@ const About = () => {
                             <img
                               width={600}
                               height={440}
-                              src="assets/img/nivsbanner.png"
+                              src="/assets/img/nivs-logo.png"
                               alt="intro"
                             />
                           </div>
                           <div className="section-column right">
                             <div className="intro-wrap">
-                              <h2 className="intro-title">
-                                Nivs Jewels
-                              </h2>
+                              <h2 className="intro-title">Nivs Jewels</h2>              
                               <div className="intro-item m-b-0">
-                                <p style={{ textAlign: "justify" }}>
-                                In November 2019, a massive pandemic began due to the virus Covid-
-                                19 (Coronavirus). This global health crisis had profound impacts, resulting in the
-                                downturn of numerous businesses worldwide.<br/>
-                                During this pandemic, we supported our workers by providing for their
-                                needs, including food and accommodation, as we traveled alongside them.
-                                Despite the challenges, we generated new ideas and designs, launching them
-                                into the market and successfully revitalizing our business statistics.
-                                We launched AMBIS GROUP, our new venture in software development.
+                                <p style={{ /* textIndent: '50px', */textAlign: 'justify'}}>
+                                  In November 2019, a massive pandemic began due
+                                  to the virus Covid- 19 (Coronavirus). This
+                                  global health crisis had profound impacts,
+                                  resulting in the downturn of numerous
+                                  businesses worldwide.
+                                  <br />
+                                  During this pandemic, we supported our workers
+                                  by providing for their needs, including food
+                                  and accommodation, as we traveled alongside
+                                  them. Despite the challenges, we generated new
+                                  ideas and designs, launching them into the
+                                  market and successfully revitalizing our
+                                  business statistics. We launched AMBIS GROUP,
+                                  our new venture in software development.
                                 </p>
                               </div>
                               <div className="intro-item m-b-0">
                                 <p style={{ textAlign: "justify" }}>
-                                We specialize in creating customized e-commerce websites for retailers
-                                looking to thrive in today's market. During the pandemic, we supported
-                                retailers hit hard by the decline in jewelry sales through digital marketing efforts.
-                                We also connected wholesale manufacturers with retailers, expanding our
-                                client base to include B2B customers.<br/>
-                                We extended our business reach by launching operations in Malaysia
-                                and Dubai. Additionally, we initiated consultancy services for jewelry
-                                manufacturers, offering comprehensive solutions to meet their various needs.
-                                This is how we've grown alongside our team, thriving in the business
-                                world. Enter NIVS JEWELS to discover the beauty within you. 
+                                  We specialize in creating customized
+                                  e-commerce websites for retailers looking to
+                                  thrive in today's market. During the pandemic,
+                                  we supported retailers hit hard by the decline
+                                  in jewelry sales through digital marketing
+                                  efforts. We also connected wholesale
+                                  manufacturers with retailers, expanding our
+                                  client base to include B2B customers.
+                                  <br />
+                                  We extended our business reach by launching
+                                  operations in Malaysia and Dubai.
+                                  Additionally, we initiated consultancy
+                                  services for jewelry manufacturers, offering
+                                  comprehensive solutions to meet their various
+                                  needs. This is how we've grown alongside our
+                                  team, thriving in the business world. Enter
+                                  NIVS JEWELS to discover the beauty within you.
                                 </p>
                               </div>
                             </div>
@@ -661,13 +704,19 @@ const About = () => {
                     <div className="block block-newsletter layout-2 one-col">
                       <div className="block-widget-wrap">
                         <div className="newsletter-title-wrap">
-                          <h2 className="newsletter-title">Latest From Nivs!</h2>
+                          <h2 className="newsletter-title">
+                            Latest From Nivs!
+                          </h2>
                           <div className="newsletter-text">
-                            Sign-up to receive 10% off your next purchase. Plus hear
-                            about new arrivals and offers.
+                            Sign-up to receive 10% off your next purchase. Plus
+                            hear about new arrivals and offers.
                           </div>
                         </div>
-                        <form action="#" method="post" className="newsletter-form">
+                        <form
+                          action="#"
+                          method="post"
+                          className="newsletter-form"
+                        >
                           <input
                             type="email"
                             name="your-email"
@@ -740,9 +789,7 @@ const About = () => {
         {/* #main-content */}
       </div>
     </>
-
-  )
-
-}
+  );
+};
 
 export default About;
