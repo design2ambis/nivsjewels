@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loader from "../components/pageloader";
+import { Link } from "react-router-dom";
 
 const About = () => {
   document.title = "Nivsjewels - Aboutus";
@@ -33,9 +34,9 @@ const About = () => {
                   </h1>
                 </div>
                 <div className="breadcrumbs" style={{ color: "#fff" }}>
-                  <a href="index.html" style={{ color: "#fff" }}>
+                  <Link to="/" style={{ color: "#fff" }}>
                     Home
-                  </a>
+                  </Link>
                   <span className="delimiter" />
                   About Us
                 </div>

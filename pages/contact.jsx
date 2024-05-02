@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import Loader from "../components/pageloader";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   document.title = "Nivsjewels - Contactus";
@@ -28,9 +29,9 @@ const Contact = () => {
                 </h1>
               </div>
               <div className="breadcrumbs" style={{ color: "#fff" }}>
-                <a href="index" style={{ color: "#fff" }}>
+                <Link to="/" style={{ color: "#fff" }}>
                   Home
-                </a>
+                </Link>
                 <span className="delimiter" />
                 Contact Us
               </div>

@@ -21,9 +21,9 @@ const Product = () => {
                 </h1>
               </div>
               <div className="breadcrumbs" style={{ color: "#fff" }}>
-                <a href="index" style={{ color: "#fff" }}>
+                <Link to="/" style={{ color: "#fff" }}>
                   Home
-                </a>
+                </Link>
                 <span className="delimiter" />
                 <a href="#!" style={{ color: "#fff" }}>
                   {cat}
