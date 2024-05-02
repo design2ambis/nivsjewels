@@ -63,9 +63,9 @@ const FooterCategory = () => {
               <ul className="menu mm-listview">
 
                 <li className="level-0 menu-item">
-                  <a href="/">
+                  <Link to="/">
                     <span className="menu-item-text">Home</span>
-                  </a>
+                  </Link>
                 </li>                
                 
                 
@@ -99,8 +99,8 @@ const FooterCategory = () => {
                
                 {isLoggedIn && (
                 <li className="level-0 menu-item" >
-                    <a href="/" onClick={handleLogout} className="menu-item">
-                    <span className="menu-item-text">Logout</span>
+                    <a href="#!" onClick={handleLogout} className="menu-item">
+                        <span className="menu-item-text">Logout</span>
                     </a>
                 </li>
                 )}

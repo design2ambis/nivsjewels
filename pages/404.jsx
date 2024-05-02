@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Loader from '../components/pageloader';
+import { Link } from 'react-router-dom';
 
 const Notfound404 = () => {
 
@@ -31,9 +32,9 @@ const Notfound404 = () => {
                                                 We're really sorry but we can't seem to find the page you were
                                                 looking for.
                                             </div>
-                                            <a className="button" href="/">
+                                            <Link className="button" to="/">
                                                 Back The Homepage
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

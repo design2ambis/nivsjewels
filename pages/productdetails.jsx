@@ -151,9 +151,9 @@ const Productdetails = () => {
                 </h1>
               </div>
               <div className="breadcrumbs" style={{ color: "#fff" }}>
-                <a href="/" style={{ color: "#fff" }}>
+                <Link to="/" style={{ color: "#fff" }}>
                   Home
-                </a>
+                </Link>
                 <span className="delimiter" />
                 <a href="#!" style={{ color: "#fff" }}>
                   {product.category_name}

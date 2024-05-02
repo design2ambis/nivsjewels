@@ -82,9 +82,9 @@ const Cart = () => {
                   </h1>
                 </div>
                 <div className="breadcrumbs">
-                  <a href="/" style={{ color: "#fff" }}>
+                  <Link to="/" style={{ color: "#fff" }}>
                     Home
-                  </a>
+                  </Link>
                   <span className="delimiter" />
                   <Link to="/cart" style={{ color: "#fff" }}>
                     cart
