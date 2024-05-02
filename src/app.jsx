@@ -32,6 +32,7 @@ const App = () => {
         <Route path="/shop/:cat/:subcat/:page" element={<Product/>} />
         <Route path="/product/:prono" element={<Productdetails/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/login/:message" element={<Login/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/forgot-password" element={<Forgotpass/>} />
         <Route path="/myaccount" element={<Myaccount/>} />       

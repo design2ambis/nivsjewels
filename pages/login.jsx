@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import Loader from '../components/pageloader';
-import { Link } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 
 const Login = () => {
   document.title = "Nivsjewels - Login";
+  const { message} = useParams();
 
+  
 
   const [isLoaded, setLoad] = useState(true);
 
@@ -104,6 +106,13 @@ const Login = () => {
     setTimeout(() => {
       setLoad(false);
     }, 500);
+    if(message=="registersuccess"){
+      Swal.fire({
+        icon: "success",
+        title: "Welcome",
+        text: "Account Verified Successfully"
+      })
+    }
   }, []);
 
   if (isLoaded) {
