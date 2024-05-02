@@ -67,9 +67,9 @@ const Header = () => {
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 header-center">
                     <div className="site-logo">
-                      <a href="/">
+                      <Link to="/">
                         <img src="/assets/images/logo1.png" alt="NIVS" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3 header-right">
@@ -131,9 +131,9 @@ const Header = () => {
             <div className="header-mobile-fixed">
               {/* Shop */}
               <div className="shop-page">
-                <a href="/">
+                <Link to="/">
                   <i className="wpb-icon-shop" />
-                </a>
+                </Link>
               </div>
               {/* Login */}
               <div className="myaccount">
@@ -313,14 +313,14 @@ const Header = () => {
                       <div className="site-logo">
 
 
-                        <a href="/">
+                        <Link to="/">
                           {/*<img src="assets/images/nivslogo.png"*/}
                           <img
                             src="/assets/images/logo1.png"
                             alt="NIVS"
                             style={{ width: 150, height: "auto" }}
                           />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center header-center">
@@ -328,9 +328,9 @@ const Header = () => {
                         <nav id="main-navigation">
                           <ul id="menu-main-menu" className="menu">
                             <li className="level-0 menu-item">
-                              <a href="/">
+                              <Link to="/">
                                 <span className="menu-item-text">Home</span>
-                              </a>
+                              </Link>
                             </li>
 
                             <Category />
@@ -375,7 +375,7 @@ const Header = () => {
                                       </Link>
                                     </li>
                                     <li>
-                                      <a href="/" onClick={handleLogout} className="menu-item">
+                                      <a href="#!" onClick={handleLogout} className="menu-item">
                                         <span className="menu-item-text">Logout</span>
                                       </a>
                                     </li>

@@ -164,7 +164,7 @@ const About = () => {
                                   NIVS JEWELS was founded by Mr. Charles
                                   Duraisamy Mathiyalagan, an entrepreneur with
                                   extensive experience in Gold manufacturing and
-                                  wholesale Business
+                                  wholesale Business.
                                   <br />
                                   His journey began in 1999 as a Production
                                   Planner at Emerald Jewel Industry Company and
