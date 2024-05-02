@@ -126,9 +126,9 @@ const Login = () => {
                 </h1>
               </div>
               <div className="breadcrumbs" style={{ color: "#fff" }}>
-                <a href="index.php" style={{ color: "#fff" }}>
+                <Link to="/" style={{ color: "#fff" }}>
                   Home
-                </a>
+                </Link>
                 <span className="delimiter" />
                 Login/Register
               </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import Gridproduct from '../components/Gridproduct';
+import { Link } from 'react-router-dom';
 
 const Product = () => {
   
